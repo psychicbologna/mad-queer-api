@@ -21,7 +21,7 @@ export class ParamMissingError extends CustomError {
 
 export class UserNotFoundError extends CustomError {
   public static readonly Msg =
-    "A user with the given id does not exists in the database.";
+    "A user with the given id does not exist in the database.";
   public static readonly HttpStatus = HttpStatusCodes.NOT_FOUND;
 
   constructor() {
@@ -35,5 +35,15 @@ export class UnauthorizedError extends CustomError {
 
   constructor() {
     super(UnauthorizedError.Msg, UnauthorizedError.HttpStatus);
+  }
+}
+
+export class ResourceNotFoundError extends CustomError {
+  public static readonly Msg =
+    "A resource with the given id does not exist in the database.";
+  public static readonly HttpStatus = HttpStatusCodes.NOT_FOUND;
+
+  constructor() {
+    super(ResourceNotFoundError.Msg, ResourceNotFoundError.HttpStatus)
   }
 }

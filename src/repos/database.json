@@ -1,1 +1,79 @@
-{"users":[{"name":"Sean Maxwell","email":"sean.maxwell@gmail.com","pwdHash":"$2b$12$1mE2OI9hMS/rgH9Mi0s85OM2V5gzm7aF3gJIWH1y0S1MqVBueyjsy","role":1,"id":159123164363},{"name":"Gordan Freeman","email":"gordan.freeman@halflife.com","pwdHash":"$2b$12$1mE2OI9hMS/rgH9Mi0s85OM2V5gzm7aF3gJIWH1y0S1MqVBueyjsy","role":0,"id":906524522143},{"name":"John Smith","email":"jsmith@yahoo.com","pwdHash":"$2b$12$1mE2OI9hMS/rgH9Mi0s85OM2V5gzm7aF3gJIWH1y0S1MqVBueyjsy","role":0,"id":357437875835}]}
+{
+    "users": [
+        {
+            "name": "Sean Maxwell",
+            "email": "sean.maxwell@gmail.com",
+            "pwdHash": "$2b$12$1mE2OI9hMS/rgH9Mi0s85OM2V5gzm7aF3gJIWH1y0S1MqVBueyjsy",
+            "role": 1,
+            "id": 159123164363
+        },
+        {
+            "name": "Gordan Freeman",
+            "email": "gordan.freeman@halflife.com",
+            "pwdHash": "$2b$12$1mE2OI9hMS/rgH9Mi0s85OM2V5gzm7aF3gJIWH1y0S1MqVBueyjsy",
+            "role": 0,
+            "id": 906524522143
+        },
+        {
+            "name": "John Smith",
+            "email": "jsmith@yahoo.com",
+            "pwdHash": "$2b$12$1mE2OI9hMS/rgH9Mi0s85OM2V5gzm7aF3gJIWH1y0S1MqVBueyjsy",
+            "role": 0,
+            "id": 357437875835
+        }
+    ],
+    "resources": [
+        {
+            "id": "5644dd93-6167-4cbe-ba78-d398bd4d5af9",
+            "title": "Get In Formation",
+            "subtitle": "A Community Safety Toolkit",
+            "description": "With addendum for Navigating Multiple Pandemics.",
+            "authors": [
+                "Vision Change Win"
+            ],
+            "type": [
+                "misc",
+                "crisis"
+            ],
+            "image": {
+                "url": "getinformation.jpg",
+                "alt": "some alt text"
+            },
+            "link": "https://www.visionchangewin.com/wp-content/uploads/2020/07/VCW-Safety-Toolkit-Final.pdf"
+        },
+        {
+            "id": "de6a02c6-1431-44a7-a52b-e95fc5a868cf",
+            "title": "Transformharm.org",
+            "subtitle": "A Resource Hub for All Things Transformative Justice",
+            "description": "TransformHarm.org is a resource hub about ending violence. We are not an organization. This site offers an introduction to transformative justice.",
+            "authors": [
+                "TransformHarm.org"
+            ],
+            "type": [
+                "misc"
+            ],
+            "image": {
+                "url": "transformharm.jpg",
+                "alt": "some alt text"
+            },
+            "link": "https://transformharm.org/"
+        },
+        {
+            "id": "a098b375-6bb2-4273-928f-f06f0756164c",
+            "title": "Creative Interventions Toolkit",
+            "subtitle": "A Practical Guide to Stop Interpersonal Violence",
+            "description": "Creative Interventions (CI) started in 2004 in Oakland as a national resources center to create and promote community-based interventions to interpersonal violence.",
+            "authors": [
+                "Mimi Kim"
+            ],
+            "type": [
+                "misc"
+            ],
+            "image": {
+                "url": "creativeinterventionstoolkit.jpg",
+                "alt": "some alt text"
+            },
+            "link": "https://www.creative-interventions.org/wp-content/uploads/2020/10/CI-Toolkit-Final-ENTIRE-Aug-2020-new-cover.pdf"
+        }
+    ]
+}

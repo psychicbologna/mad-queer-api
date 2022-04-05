@@ -1,4 +1,5 @@
 import logger from "jet-logger";
+import { v4 } from 'uuid';
 
 /**
  * Print an error object if it's truthy. Useful for testing.
@@ -18,4 +19,8 @@ export function pErr(err?: Error): void {
  */
 export function getRandomInt(): number {
   return Math.floor(Math.random() * 1_000_000_000_000);
+}
+
+export function uuid(): string {
+  return v4();
 }

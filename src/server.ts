@@ -4,6 +4,7 @@ import path from 'path';
 import helmet from 'helmet';
 import StatusCodes from 'http-status-codes';
 import express, { NextFunction, Request, Response } from 'express';
+import cors from 'cors';
 
 import 'express-async-errors';
 
@@ -11,6 +12,9 @@ import BaseRouter from './routes/api';
 import logger from 'jet-logger';
 import { cookieProps } from '@routes/auth-router';
 import { CustomError } from '@shared/errors';
+import { request } from 'http';
+
+import resourceService from '@services/resource-service';
 
 const app = express();
 
@@ -21,7 +25,7 @@ const app = express();
  ***********************************************************************************/
 
 app.use(express.json());
-app.use(express.urlencoded({extended: true}));
+app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser(cookieProps.secret));
 
 // Show routes called in console during development
@@ -62,7 +66,7 @@ app.use(express.static(staticDir));
 
 // Nav to login pg by default
 app.get('/', (_: Request, res: Response) => {
-    res.sendFile('login.html', {root: viewsDir});
+    res.sendFile('login.html', { root: viewsDir });
 });
 
 // Redirect to login if not logged in.
@@ -71,8 +75,20 @@ app.get('/users', (req: Request, res: Response) => {
     if (!jwt) {
         res.redirect('/');
     } else {
-        res.sendFile('users.html', {root: viewsDir});
+        res.sendFile('users.html', { root: viewsDir });
     }
+});
+
+app.get('/resources', cors(), async (req: Request, res: Response) => {
+    const protocol = req.protocol;
+    const url = req.get('host')
+
+    if (url) {
+        const resources = await resourceService.getAll(protocol, url);
+        res.json(resources)
+    } else { res.status(500) }
+
+
 });
 
 
