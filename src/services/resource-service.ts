@@ -13,8 +13,10 @@ import { resourceDecorator } from "./service.helpers";
  */
 async function getAll(protocol: string, url: string): Promise<void | Resource[]> {
     const resources: Resource[] = await resourceRepo.getAll();
-    const finalResources: Resource[] = resourceDecorator(protocol, resources, url)
-    return finalResources;
+    // const finalResources: Resource[] = resourceDecorator(protocol, resources, url)
+    // return finalResources;
+    return resources;
+
 }
 
 /**

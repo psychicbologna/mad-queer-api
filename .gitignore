@@ -1,2 +1,2 @@
-.env
+./src/pre-start/env/*
 node_modules
